@@ -72,8 +72,8 @@ M.auto_pull = function(dir)
         return
     end
     return require('plenary.job'):new {
-        command = 'git',
-        args = { 'pull', '--rebase', '-q' },
+        command = 'git-smart-pull',
+        args = {},
         on_stdout = function(err, data, j)
             vim.print(data)
         end,
